@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thêm hoạt động</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #main{
+            display: flex;
+            /* padding:20px; */
+        }
+        #content {
+            width: 60%;
+            /* height: auto; */
+            height: 460px;
+            border: 2px solid #007bff;
+            padding: 10px 20px;
+            margin-left:10px ;
+            overflow-y: scroll;
+        }
+        .wrapper {
+            padding-bottom: 20px;
+        }
+	</style>
+</head>
+<body>
+            <section class="container" >
+				<h2 class="display-6 pt-3">Thêm hoạt động</h2>
+				<form action="?addnv=1" method="POST" >
+                    <label for="IDPB">Tên hoạt động</label>
+					<input type="text" required style="font-weight:bold" name="TenHD" id="TenHD" class="form-control" >
+					
+                    <label for="Tenpb">Mô tả hoạt động</label>
+					<input type="text" required style="font-weight:bold" name="MoTaHD" id="MoTaHD" class="form-control" >
+					
+                    <label for="Mota">Ngày giờ Bắt Đầu</label>
+					<input type="datetime-local" required style="font-weight:bold" name="NgayGioBD" id="NgayGioBD" class="form-control" >
+
+                    <label for="Mota">Ngày giờ Kết Thúc</label>
+					<input type="datetime-local" required style="font-weight:bold" name="NgayGioKT" id="NgayGioKT" class="form-control" >
+                    
+                    <label for="Mota">Số lượng tối thiểu yêu cầu</label>
+					<input type="number" required style="font-weight:bold" name="SLToiThieuYC" id="SLToiThieuYC" class="form-control" >
+                    
+                    <label for="Mota">Số lượng tối đa yêu cầu</label>
+					<input type="number" required style="font-weight:bold" name="SLToiDaYC" id="SLToiDaYC" class="form-control" >
+
+                    <label for="Mota">Thời hạn đăng kí</label>
+					<input type="date" required style="font-weight:bold" name="ThoiHanDK" id="ThoiHanDK" class="form-control" >
+
+                    <label for="Mota">Lý do hủy hoạt động</label>
+					<input type="text" style="font-weight:bold" name="LyDoHuyHD" id="LyDoHuyHD" class="form-control" >
+                    <br>
+                        <input type="submit" id="addnv" name="addnv" class="btn btn-block btn-outline-primary" value="OK" >
+                        <input type="reset" name="reset" id="res" class="btn btn-block btn-outline-primary" value="RESET">
+                    <br>
+                    <br>
+				</form>
+			</section>
+</body>
+</html>
